@@ -111,7 +111,7 @@ def find_product():
 		print_data(id_contact=exists)
 	else:
 		print("Data Tidak Ada")
-	input("Tekan ENTER untuk kemali ke MENU")
+	input("Tekan ENTER untuk kembali ke MENU")
 
 def delete_product():
 	print_header("Menghapus Produk")
@@ -119,7 +119,7 @@ def delete_product():
 	exists = searching_by_name(nama)
 	if exists:
 		print_data(id_contact=exists)
-		respon = input(f"yakin ingin menghapus {nama} ? (Y/N) ")
+		respon = input(f"yakin ingin menghapus {nama} ? (Y/N) : ")
 		if verify_ans(respon):
 			del contacts[exists]
 			saved = save_data_contacts()
@@ -153,7 +153,7 @@ def update_contact_harga(id_contact):
 	result = verify_ans(respon)
 	if result:
 		contacts[id_contact]['harga'] = new_harga
-		print("Data Telahg Disimpan")
+		print("Data Telah Disimpan")
 		print_data(id_contact)
 	else:
 		print("Data Batal Diubah")
@@ -199,8 +199,8 @@ def about_app():
 	system("cls")
 	print("""
 	Aplikasi Penyimpanan Sembako Abal Abal
-	Sejak 2021
-	Founder : Aming Gaming
+	Dibuat pada 14/11/2020
+	Dibuat oleh : Nicholas 
 	""")
 	
 
